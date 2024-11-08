@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+/* Navigation */
 header {
     display: flex;
     align-items: center;
@@ -69,7 +70,7 @@ section > * {
     margin: 0; /* Ensures no spacing between child elements */
 }
 
-/* Styling for specific sections */
+/* Home */
 .home {
     width: 100%;
     min-height: 100vh;
@@ -125,6 +126,7 @@ section > * {
     width: 350px;
 }
 
+/* About */
 .about {
     width: 100%;
     min-height: 100vh;
@@ -182,7 +184,7 @@ video {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Basic styling */
+/* Portfolio */
 .portfolio {
     width: 100%;
     min-height: 100vh;
@@ -261,46 +263,85 @@ video {
     font-size: 1.2rem;
 }
 
-
-#contact {
-
+/* Contact */
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between; /* Places the content and image at opposite ends */
+    padding: 30px 12% 0;
 }
 
-
-.section-container {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fafafa; /* Extremely light grey for sections */
+/* Contact Content Styling */
+.contact-content {
+    max-width: 800px;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    z-index: 1;
 }
 
-.project-item {
-    background-color: #f0f0f0; /* Slightly darker light grey for contrast */
-    border: 1px solid #88a4a6; /* Border matching navbar color */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+.contact-content h1 {
+    font-size: 30px;
+    color: #df877f;
 }
 
-footer {
-    background-color: #88a4a6; /* Consistent footer color */
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
+.contact-content p {
+    font-size: 20px;
+    color: #99b9e9;
 }
 
-footer p {
-    margin: 0;
+/* Contact Info Styling */
+.contact-content {
+    width: 100%; /* Ensures the container takes full width */
+    max-width: 800px; /* Optional: restricts the width of the contact info */
+    display: flex;
+    justify-content: flex-start; /* Align icons to the left */
+    gap: 20px; /* Adds space between the icons */
+    flex-wrap: wrap; /* Ensures that icons wrap into the next line if necessary */
+    margin-top: 20px; /* Space between the paragraph and contact icons */
 }
 
-/* Contact Page Styling */
-.contact-info {
-    background-color: #f8d8d8; /* Pastel pink for contact section background */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
-    color: #8b0000; /* Dark red to match other accents */
-    text-align: center;
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Removes the default margin */
+    display: flex;
 }
+
+.contact-content li {
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adds space between list items */
+}
+
+.contact-content i {
+    margin-right: 10px;
+    color: #382d9a;
+    font-size: 2em;
+}
+.contact-content li:hover {
+    text-shadow: 
+        0 0 5px rgba(124, 163, 193, 0.762), /* Light glow */
+        0 0 10px rgba(70, 130, 180, 0.6); /* Stronger glow */
+}
+
+/* Quote Section */
+.quote-section {
+    display: flex; /* Flexbox to arrange images */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images horizontally */
+    width: 40%; /* Restrict the image section to 40% of the container width */
+}
+
+.quote-section img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Set the max width to control the size */
+    height: auto;
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
 
 /* Particle effect */
 .particles {
