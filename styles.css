@@ -1,0 +1,415 @@
+/* Reset all default margins and set box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0; /* Removes default spacing between elements */
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes logo to the left and nav to the right */
+    background-color: #485a5c00;
+    padding: 10px;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-container {
+    margin-left: 15px; /* Adds space between the logo and the left edge */
+    margin-top: 20px; /* Adds space between the logo and the top edge */
+}
+
+.nav-logo {
+    width: 70px;
+    height: auto;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #79abec; /* Dark blue color */
+    text-decoration: none;
+    font-size: 22px; /* Increase font size as needed */
+}
+
+nav ul li a:hover {
+    text-shadow: 
+        0 0 5px rgba(124, 163, 193, 0.762), /* Light glow */
+        0 0 10px rgba(70, 130, 180, 0.6); /* Stronger glow */
+}
+
+/* Apply unified section styling */
+section {
+    background-color: #294f70; /* Replace with your desired background color */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding within sections as needed */
+}
+
+/* Remove any unintended margin for direct child elements */
+section > * {
+    margin: 0; /* Ensures no spacing between child elements */
+}
+
+/* Styling for specific sections */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+    z-index: 1;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.home-content h1 {
+    font-size: 25px;
+    color: 	#99b9e9;
+}
+
+.home-content h2 {
+    font-size: 42px;
+    color: 	#99b9e9;
+}
+
+.home-content h2 span{
+    color:#df877f
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #8a7fef;
+}
+
+.get-started-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9a95dc30; /* Change to your desired color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.get-started-button:hover {
+    background-color: #9a95dc60; /* Change to a darker shade for hover effect */
+    box-shadow: 0 0 10px rgba(112, 169, 210, 0.5), /* Soft glow */
+                0 0 20px rgba(112, 169, 210, 0.2); /* Extended glow */
+}
+
+.img-box1 img {
+    border-radius: 50%;
+    width: 350px;
+}
+
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+.about-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.about-content h1 {
+    font-size: 30px;
+    color: 	#df877f;
+}
+
+.about-content p {
+    font-size: 20px;
+    color: #99b9e9;
+}
+
+.about-content p span{
+    color:#8a7fef
+}
+
+.img-box2 {
+    display: flex; /* Flexbox to arrange images */
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Space between images */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images horizontally */
+}
+
+.img-box2 img {
+    width: 100%; /* Use 100% to fit within the container */
+    height: auto;
+    max-width: 1500px; /* Increased max width for a larger display */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.video-container {
+    margin-top: 20px; /* Space above the video */
+    display: flex; /* Allows centering within the container */
+    justify-content: center; /* Center the video horizontally */
+    width: 100%; /* Ensure full width for proper alignment */
+}
+
+video {
+    border-radius: 8px; /* Optional: add rounded corners to the video */
+    width: 100%; /* Make video responsive */
+    max-width: 1500px; /* Increased max width to match the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Basic styling */
+.portfolio {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 12% 0;
+}
+
+/* Position h1 at the top left */
+.portfolio h1 {
+    color: #df877f;
+    font-size: 2.5rem;
+    margin-bottom: 2rem; /* Adds spacing below the heading */
+}
+
+/* Center the card container */
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the card container */
+}
+
+/* Flex container for cards */
+.card-container {
+    display: flex;
+    gap: 15rem; /* Space between the cards */
+}
+
+/* Card styling */
+.category-card {
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    color: #382d9a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(10, 35, 75, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #99b9e9;
+}
+
+.category-card .card-content {
+    padding: 15px;
+    background-color: #dfecff;
+}
+
+.category-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    font-size: 1rem;
+    color: #99b9e9;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(124, 163, 193, 0.8), /* Light glow */
+                0 0 10px rgba(70, 130, 180, 0.8); /* Stronger glow */;
+}
+
+/* Optional: Back link styling */
+.back-link {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+#contact {
+
+}
+
+
+.section-container {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fafafa; /* Extremely light grey for sections */
+}
+
+.project-item {
+    background-color: #f0f0f0; /* Slightly darker light grey for contrast */
+    border: 1px solid #88a4a6; /* Border matching navbar color */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #88a4a6; /* Consistent footer color */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Page Styling */
+.contact-info {
+    background-color: #f8d8d8; /* Pastel pink for contact section background */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    color: #8b0000; /* Dark red to match other accents */
+    text-align: center;
+}
+
+/* Particle effect */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Keeps particles unclickable */
+    overflow: hidden; /* Hide overflowed particles */
+    z-index: 0; /* Ensure it stays in the background */
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 1); /* Change color if needed */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 4s infinite ease-in-out; /* Reduced duration for higher frequency */
+    z-index: 0; /* Ensures particles stay behind content */
+
+    /* Glow effect for each particle */
+    box-shadow: 0 0 10px rgba(50, 100, 200, 1), /* Soft outer glow */
+                0 0 50px rgba(230, 100, 200, 1); /* Subtle extended glow */
+}
+
+/* Floating animation for particles */
+@keyframes float {
+    from {
+        transform: translateY(0) translateX(0); /* Start from the top */
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(100vh) translateX(10vw); /* Move downwards */
+        opacity: 0.2;
+    }
+}
+
+/* Additional particles with varying sizes, speeds, and delays */
+.particle:nth-child(1) {
+    width: 5px;
+    height: 5px;
+    left: 20%;
+    animation-duration: 3s; /* Shorter duration for higher frequency */
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 8px;
+    height: 8px;
+    left: 40%;
+    animation-duration: 2.5s; /* Shorter duration for higher frequency */
+    animation-delay: 0.5s; /* Slight delay for staggered effect */
+}
+
+.particle:nth-child(3) {
+    width: 12px;
+    height: 12px;
+    left: 60%;
+    animation-duration: 3.5s; /* Shorter duration for higher frequency */
+    animation-delay: 1s; /* Slight delay for staggered effect */
+}
+
+.particle:nth-child(4) {
+    width: 6px;
+    height: 6px;
+    left: 80%;
+    animation-duration: 2.8s; /* Shorter duration for higher frequency */
+    animation-delay: 0.2s; /* Slight delay for staggered effect */
+}
+
+.particle:nth-child(5) {
+    width: 7px;
+    height: 7px;
+    left: 90%;
+    animation-duration: 3.2s; /* Shorter duration for higher frequency */
+    animation-delay: 1.5s; /* Slight delay for staggered effect */
+}
+
+.particle:nth-child(6) {
+    width: 10px; /* Different size */
+    height: 10px;
+    left: 15%;
+    animation-duration: 2.7s; /* Faster */
+    animation-delay: 0.3s; /* Staggered */
+}
+
+.particle:nth-child(7) {
+    width: 9px; /* Different size */
+    height: 9px;
+    left: 25%;
+    animation-duration: 3.1s; /* Moderate speed */
+    animation-delay: 0.8s; /* Staggered */
+}
+
+.particle:nth-child(8) {
+    width: 11px; /* Different size */
+    height: 11px;
+    left: 35%;
+    animation-duration: 2.9s; /* Faster */
+    animation-delay: 1.2s; /* Staggered */
+}
+
+.particle:nth-child(9) {
+    width: 4px; /* Smaller size */
+    height: 4px;
+    left: 50%;
+    animation-duration: 4s; /* Slower */
+    animation-delay: 1.8s; /* Staggered */
+}
